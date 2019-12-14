@@ -39,19 +39,7 @@
     "coverage:ci": "CI=true npm run test -- --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "server": "npm run build && serve -S build",
+    "preinstall": "echo preinstall",
     "postinstall": "echo postinstall"
-  },
-  "jest": {
-    "collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}", "!<rootDir>/node_modules/"],
-    "coverageThreshold": {
-      "global": {
-        "branches": 0,
-        "functions": 0,
-        "lines": 0,
-        "statements": 0
-      }
-    },
-    "coverageReporters": ["html", "json", "text"],
-    "snapshotSerializers": []
   }
 }

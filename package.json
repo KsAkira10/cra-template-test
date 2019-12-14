@@ -18,7 +18,8 @@
   "readme": "README.md",
   "files": [
     "template",
-    "template.json"
+    "template.json",
+    "dev.template.json"
   ],
   "engines": {
     "node": ">=8.10"
