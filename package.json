@@ -1,0 +1,26 @@
+{
+  "name": "cra-template-test",
+  "version": "0.1.0",
+  "description": "This is the base template for Test projects made for reactjs.",
+  "main": "template.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template",
+    "cra-template",
+    "rchlo"
+  ],
+  "author": "Lucas Akira Uehara <akirauehara@hotmail.com>",
+  "license": "MIT",
+  "readme": "README.md",
+  "files": [
+    "template",
+    "template.json"
+  ],
+  "engines": {
+    "node": ">=8.10"
+  }
+}
