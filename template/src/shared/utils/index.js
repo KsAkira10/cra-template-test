@@ -6,3 +6,5 @@ export const WindowSize = () => ({ height: window.innerHeight, width: window.inn
 export const $ = (selector) => document.querySelector(selector);
 
 export const $all = (selector) => document.querySelectorAll(selector);
+
+export const env = process.env.NODE_ENV === 'production' ? window.env : process.env;

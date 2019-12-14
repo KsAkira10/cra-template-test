@@ -5,7 +5,7 @@ rm -rf ./env-config.js
 touch ./env-config.js
 
 # Add assignment 
-echo "window.process = { env: {" >> ./env-config.js
+echo "window.env = {" >> ./env-config.js
 
 # Read each line in .env file
 # Each line represents key=value pairs
@@ -26,4 +26,4 @@ do
   echo "  $varname: \"$value\"," >> ./env-config.js
 done < .env
 
-echo "}};" >> ./env-config.js
+echo "};" >> ./env-config.js
