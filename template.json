@@ -3,9 +3,7 @@
     "prop-types": "^15.7.2",
     "redux": "^4.0.4",
     "redux-observable": "^1.2.0",
-    "rxjs": "^6.5.3"
-  },
-  "devDependencies": {
+    "rxjs": "^6.5.3",
     "@babel/preset-flow": "^7.7.4",
     "babel-eslint": "^10.0.3",
     "enzyme": "^3.10.0",
@@ -25,7 +23,23 @@
     "node-sass": "^4.13.0",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1",
-    "source-map-explorer": "^2.1.2"
+    "source-map-explorer": "^2.1.2",
+    "serve": "^11.2.0"
+  },
+  "scripts": {
+    "env": "chmod +x ./env.sh && ./env.sh && cp ./env-config.js ./public/",
+    "prestart": "npm run env",
+    "prebuild": "npm run env",
+    "docker:build": "docker build -t $npm_package_name:$npm_package_version -t $npm_package_name:latest .",
+    "docker:run": "docker run --rm -it -p 8080:80 $npm_package_name:latest",
+    "test": "react-scripts test --env=jsdom",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "test:ci": "CI=true react-scripts test --env=jsdom",
+    "coverage": "npm run test -- --coverage --watchAll=false",
+    "coverage:ci": "CI=true npm run test -- --coverage --watchAll=false",
+    "eject": "react-scripts eject",
+    "server": "npm run build && serve -S build",
+    "postinstall": "echo postinstall"
   },
   "jest": {
     "collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}", "!<rootDir>/node_modules/"],
@@ -39,16 +53,5 @@
     },
     "coverageReporters": ["html", "json", "text"],
     "snapshotSerializers": []
-  },
-  "scripts": {
-    "docker:build": "docker build -t $npm_package_name:$npm_package_version -t $npm_package_name:latest .",
-    "docker:run": "docker run --rm -it -p 8080:80 $npm_package_name:latest",
-    "test": "react-scripts test --env=jsdom",
-    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
-    "test:ci": "CI=true react-scripts test --env=jsdom",
-    "coverage": "npm run test -- --coverage --watchAll=false",
-    "coverage:ci": "CI=true npm run test -- --coverage --watchAll=false",
-    "eject": "react-scripts eject",
-    "server": "npm run build && serve -S build"
   }
 }
