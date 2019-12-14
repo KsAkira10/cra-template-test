@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "prop-types": "^15.7.2",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
     "redux": "^4.0.4",
     "redux-observable": "^1.2.0",
     "rxjs": "^6.5.3",
@@ -40,6 +42,6 @@
     "eject": "react-scripts eject",
     "server": "npm run build && serve -S build",
     "preinstall": "echo preinstall",
-    "postinstall": "echo postinstall"
+    "postinstall": "cd ./$npm_package_name && npm start"
   }
 }
