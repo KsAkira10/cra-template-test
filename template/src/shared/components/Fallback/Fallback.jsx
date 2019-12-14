@@ -1,3 +1,5 @@
+// example - delete later
+// @flow
 import React from 'react';
 import { string, element } from 'prop-types';
 import './Fallback.scss';

@@ -1,6 +1,7 @@
+// @flow
 import React from 'react'
 import { element } from 'prop-types'
-import { ReactComponents as Logo } from './logo.svg'
+import { ReactComponent as Logo } from '../../logo.svg'
 import './Layout.scss'
 
 const Layout = ({ children }) => (

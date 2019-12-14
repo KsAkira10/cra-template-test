@@ -1,7 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# git files
+.gitconfig
+
 # dependencies
-/node_modules
+node_modules/
 /.pnp
 .pnp.js
 
@@ -21,3 +24,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/public/assets
+/src/assets/fonts/RCHLO
+
+# Webstorm configuration
+.idea

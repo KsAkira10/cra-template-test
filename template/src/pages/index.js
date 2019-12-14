@@ -1,16 +1,16 @@
 // @flow
-import React, { lazy, Suspense } from 'react';
-import { shape } from 'prop-types';
-import { connect } from 'react-redux';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Fallback from '../shared/components/Fallback/Fallback';
-import Layout from '../containers/Layout/Layout';
+import React, { lazy, Suspense } from "react";
+import { shape } from "prop-types";
+import { connect } from "react-redux";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Fallback from "../shared/components/Fallback/Fallback";
+import Layout from "../containers/Layout/Layout";
 
 const routes = [
   {
-    path: '/',
+    path: "/",
     exact: true,
-    component: lazy(() => import('./Domain/Domain'))
+    component: lazy(() => import("./Domain/Domain"))
   }
 ];
 
