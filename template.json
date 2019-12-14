@@ -32,7 +32,7 @@
     "env": "chmod +x ./env.sh && ./env.sh && cp ./env-config.js ./public/",
     "prestart": "npm run env",
     "prebuild": "npm run env",
-    "docker:build": "docker build -t $npm_package_name:$npm_package_version -t $npm_package_name:latest .",
+    "docker:build": "npm run build && docker build -t $npm_package_name:$npm_package_version -t $npm_package_name:latest .",
     "docker:run": "docker run --rm -it -p 8080:80 $npm_package_name:latest",
     "test": "react-scripts test --env=jsdom",
     "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
@@ -41,7 +41,6 @@
     "coverage:ci": "CI=true npm run test -- --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "server": "npm run build && serve -S build",
-    "preinstall": "echo preinstall",
-    "postinstall": "cd ./$npm_package_name && npm start"
+    "preinstall": "echo preinstall"
   }
 }
