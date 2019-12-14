@@ -1,16 +1,16 @@
-# cra-template-rchlo
-> 🍥 This is the base template for RCHLO projects made for ReactJs on the official version of [Create React App](https://github.com/facebook/create-react-app).
+# cra-template-test
+> 🍥 This is the base template for test projects made for ReactJs on the official version of [Create React App](https://github.com/facebook/create-react-app).
 
-To use this template, add `--template rchlo` when creating a new app.
+To use this template, add `--template test` when creating a new app.
 
 For example:
 
 ```sh
-npx create-react-app <my-rchlo-app> --template rchlo 
+npx create-react-app <my-test-app> --template test 
 
 # or
 
-yarn create react-app <my-rchlo-app> --template rchlo
+yarn create react-app <my-test-app> --template test
 ```
 
 For more information, please refer to:

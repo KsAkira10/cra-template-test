@@ -22,5 +22,9 @@
   ],
   "engines": {
     "node": ">=8.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:KsAkira10/cra-template-test.git"
   }
 }
