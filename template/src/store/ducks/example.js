@@ -35,8 +35,8 @@ const domainReducer = (
 
 // Action Creators
 export const domainAction = (payload) => ({ type: Types.DOMAIN_ACTION, payload });
-export const domainActionResponse = (payload) => ({ type: Types.DOMAIN_ACTION, payload });
-export const domainActionError = (payload) => ({ type: Types.DOMAIN_ACTION, payload });
+export const domainActionResponse = (payload) => ({ type: Types.DOMAIN_ACTION_RESPONSE, payload });
+export const domainActionError = (payload) => ({ type: Types.DOMAIN_ACTION_ERROR, payload });
 
 // Epics
 const domainEpic = (action$) =>

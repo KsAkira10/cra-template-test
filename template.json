@@ -10,5 +10,18 @@
     "enzyme-adapter-react-16": "^1.15.1",
     "jest-enzyme": "^7.1.2",
     "node-sass": "^4.13.0"
+  },
+  "jest": {
+    "collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}", "!<rootDir>/node_modules/"],
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": 0
+      }
+    },
+    "coverageReporters": ["html", "json", "text"],
+    "snapshotSerializers": []
   }
 }

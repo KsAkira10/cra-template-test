@@ -1,4 +1,4 @@
 // example - delete later
 import { ajax } from 'rxjs/ajax';
 
-export const mockService = () => ajax.getJson('./mock.json');
+export const mockService = () => ajax.getJSON('./manifest.json');

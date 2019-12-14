@@ -8,20 +8,20 @@ import { domainAction } from '../../store/ducks/example';
 
 const Domain = ({
   domainState: {
-    data: { title },
+    name,
   },
 }) => {
   const dispatch = useDispatch();
   
   useEffect(() => {
     dispatch(domainAction());
-  }, []);
+  }, [dispatch]);
 
   return (
     <main className="domain">
       <Layout>
         <>
-          <h2>Layout por dominio: {title}</h2>
+          <h2>Layout por dominio: {name}</h2>
         </>
       </Layout>
     </main>
@@ -29,9 +29,7 @@ const Domain = ({
 };
 Domain.propTypes = {
   domainState: shape({
-    data: shape({
-      title: string,
-    }),
+    name: string,
   }),
 };
 
