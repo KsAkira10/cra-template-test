@@ -1,6 +1,6 @@
 {
   "name": "@ksakira10/cra-template-test",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "This is the base template for Test projects made for reactjs.",
   "main": "template.json",
   "scripts": {
