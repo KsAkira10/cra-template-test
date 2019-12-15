@@ -41,6 +41,6 @@
     "coverage:ci": "CI=true npm run test -- --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "server": "npm run build && serve -S build",
-    "preinstall": "echo preinstall"
+    "preinstall": "node ./preinstall.js"
   }
 }
