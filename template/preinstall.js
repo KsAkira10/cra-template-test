@@ -2,7 +2,7 @@
 const fs = require('fs');
 
 const tpl = fs.readFileSync('package.json');
-const devTpl = fs.readFileSync('dev.template.json');
+const devTpl = fs.readFileSync('template.json');
 const parsePackage = JSON.parse(tpl);
 const parseTemplate = JSON.parse(devTpl);
 const data = {
