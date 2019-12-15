@@ -30,3 +30,7 @@ yarn-error.log*
 
 # Webstorm configuration
 .idea
+
+# Temporary env files
+/public/env-config.js
+env-config.js
