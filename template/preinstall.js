@@ -12,4 +12,8 @@ const data = {
 delete data.scripts.preinstall;
 delete data.eslintConfig;
 
-fs.writeFileSync('./package.json', JSON.stringify(data));
+try {
+  fs.writeFileSync('./package.json', JSON.stringify(data));
+} catch (err) {
+  console.error(err);
+}
