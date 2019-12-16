@@ -1,19 +1,24 @@
-'use strict';
-const fs = require('fs');
+(() => {
+  'use strict';
+  const fs = require('fs');
 
-const tpl = fs.readFileSync('package.json');
-const devTpl = fs.readFileSync('template.json');
-const parsePackage = JSON.parse(tpl);
-const parseTemplate = JSON.parse(devTpl);
-const data = {
-  ...parsePackage,
-  ...parseTemplate,
-};
-delete data.scripts.preinstall;
-delete data.eslintConfig;
+  const rename = ({ name }) => ({ name: `omni.front.react.${name}` });
 
-try {
-  fs.writeFileSync('./package.json', JSON.stringify(data));
-} catch (err) {
-  console.error(err);
-}
+  try {
+    const parsePackage = JSON.parse(fs.readFileSync('./package.json'));
+    const parseTemplate = JSON.parse(fs.readFileSync('./template.json'));
+
+    const data = {
+      ...parsePackage,
+      ...parseTemplate,
+      ...rename({ ...parsePackage }),
+    };
+
+    delete data.scripts.preinstall;
+    delete data.eslintConfig;
+
+    fs.writeFileSync('./package.json', JSON.stringify(data));
+  } catch (err) {
+    console.error(err);
+  }
+})();
